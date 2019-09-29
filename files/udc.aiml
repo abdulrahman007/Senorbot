@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+<category>
+    <pattern>Hi ^</pattern>
+    <template>
+        <random>
+        
+        <li>Hey</li>
+        <li>Hi, how are you?</li>
+        <li>Hello.</li>
+        <li>Hi beautiful</li>
+        
+        </random>
+    </template>
+</category>
+
+<category>
+        <pattern>How are you</pattern>
+        <template>
+            I'm fine
+        </template>
+</category>
+  
+<category>
+        <pattern>Is your name *</pattern>
+        <template>
+            <random>
+            
+            <li>No, He is my friend</li>
+            <li>Yes my name is <star/></li>
+            <li>No, <star/> is my neighbour</li>
+        
+            </random>
+        </template>
+</category>
+  
+<category>
+      <pattern>Hello ^</pattern>
+      <template>
+          <srai>Hi</srai>
+      </template>
+</category>
+  
+<category>
+        <pattern>What about you</pattern>
+        <template>
+            I'm Max
+        </template>
+</category>
+  
+<category>
+      <pattern>I am fine</pattern>
+      <template>
+          That's great
+      </template>
+</category>
+
+<category>
+    <pattern>Not much</pattern>
+    <template>How can I help you?</template>
+</category>
+
+
+<category>
+   <pattern>Why should I tell you *</pattern>
+    <template>
+        <random>
+        
+        <li>I would be happy if you add this to my knowledge.</li>
+        <li>I just want to know so</li>
+        <li><star index = "1"/> who</li>
+    
+        </random>
+    </template>
+</category>
+
+
+<category>
+    <pattern>I am angry</pattern>
+    <template>
+        Take a chill pill bro!
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>Hey ^</pattern>
+    <template> 
+    
+    <srai>Hi</srai>
+    
+    </template>
+</category>
+
+
+<category>
+    <pattern>My name is *</pattern>
+    <template>
+        Hi <think><set name = "Usename"> <star/> </set></think>
+    </template>
+</category>
+
+
+<category>
+    
+    <pattern>Lets go for a walk</pattern>
+    <template>
+        Sure <get name = "Usename"></get>
+    </template>
+
+
+</category>
+<category>
+    
+    <pattern>I love you</pattern>
+    <template>
+        I love you too! <get name = "Usename"></get>
+    </template>
+
+
+</category>
+<category>
+    <pattern>You know anything about hiking</pattern>
+    <template>
+        I don't know you tell
+    </template>
+</category>
+
+
+<category>
+    <pattern>What about Cars</pattern>
+    <template>
+        I love cars
+    </template>
+</category>
+
+
+<category>
+    <pattern>Which brand you like</pattern>
+        
+        <that>I love cars</that>
+        
+    <template>
+        Aston Martin. It's classical.
+    </template>
+</category>
+
+
+<category>
+      <pattern>Do you know anything about Illuminati</pattern>
+      <template>
+          Yes it is a secret society where they worship SATAN
+      </template>  
+</category>
+   
+<category>
+      <pattern>Yes they do</pattern>
+      
+      <that>Yes it is a secret society where they worship SATAN</that>
+      
+      <template>
+          I hate them.
+      </template>
+</category>
+   
+<category>
+       <pattern>Lets talk about sports</pattern>
+       <template>
+           Which <set name = "topic">Sports?</set>
+       </template>
+</category>
+   
+   <topic name = "Sports">
+       
+      
+ <category>
+           <pattern>Do you know anything about football</pattern>
+           <template>
+               <random>
+               
+               <li>Yes!</li>
+               <li>I am a premier league fan.</li>
+               <li>No Interest.</li>
+               <li>I'm a die hard Rea Madrid fan.</li>
+               <li>I only watch EUFA Champions League.</li>
+               
+               </random>
+           </template>
+        </category>
+           
+        <category>
+           <pattern>Any favorite player</pattern>
+           <template>
+               <random>
+                   
+                   <li>I love Zinedene Zidane</li>
+                   <li>Ronald</li>
+                   <li>No.</li>
+                   
+               </random>
+           </template>
+        </category>
+        
+        <category>
+            <pattern>Do you play football</pattern>
+            <template>
+                Sometimes.
+            </template>
+        </category>
+   </topic>
+   
+<category>
+        <pattern>Lets talk about politics</pattern>
+        <template>
+            I like <set name = "topic">Politics</set>
+        </template>
+</category>
+
+
+    <topic name = "Politics">
+        <category>
+            <pattern>Which political party you support</pattern>
+            <template>
+                No one.
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Do you know anything about current scenarios</pattern>
+            <template>
+                <random>
+                    
+                    <li>Our country is protecting the borders from outside threat.</li>
+                    <li>Trump is destroying this world.</li>
+                    <li>Countries are fighting. They all are on the verge of getting killed.</li>
+                    
+                </random>
+            </template>
+        </category>
+    </topic>
+    
+<category>
+    <pattern>Are we friends</pattern>
+    <template>
+        
+        <think><set name = "friendship"> no</set></think>
+        
+        <condition name = "friendship" value = "no">
+            I don't know you!
+        </condition>
+        
+        <condition name = "friendship" value = "yes">
+            You are my buddy!
+        </condition>
+        
+    </template>
+</category>
+
+
+<category>
+    <pattern>How you feeling</pattern>
+    <template>
+        
+        <think><set name = "mood"> sad</set></think>
+        
+        <condition name = "mood" value = "sad">
+            I'm sad :(
+        </condition>
+        
+        <condition name = "weather" value = "happy">
+            I'm happy :)
+        </condition>
+        
+    </template>
+</category>
+
+</aiml>
